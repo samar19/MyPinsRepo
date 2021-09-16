@@ -173,18 +173,18 @@ background-color: rgba(0, 0, 0, 0.5);
 
 }
 
-   .pin_image img{
+/* .pin_image img{
      /* max-height: 100%;*/
-     opacity: 0;
-   }
+   /*  opacity: 0;
+   }*/
 
-   .pin_max_width {
+  /* .pin_max_width {
     max-width: 100%;
- }
+ }*/
 
- .pin_max_height {
+ /*.pin_max_height {
     max-height: 100%;
- }
+ }*/
 
 #left_side .section3 .save-from-site {
     width: 340px;

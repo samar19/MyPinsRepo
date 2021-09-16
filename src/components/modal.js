@@ -24,7 +24,7 @@ function upload_img (event , pinDetails ,setPinDetails ,setshowLabel ,setshowMod
        reader.readAsDataURL(event.target.files[0]);
    }
    
-   }
+   } 
    
    }
 
@@ -44,28 +44,29 @@ function upload_img (event , pinDetails ,setPinDetails ,setshowLabel ,setshowMod
      image.style.opacity = 1;
    }
 
-   function save_pin(pinDetails) {
+   function save_pin( pinDetails , add_pin) {
       const users_data = {
          ...pinDetails,
-         auther:'jack',
+         author:'jack',
          board:'default',
          title:document.querySelector('#pin_title').value,
-         descreption:document.querySelector('#pin_descreption').value,
-         distination:document.querySelector('#pin_distination').value,
+         description:document.querySelector('#pin_description').value,
+         destination:document.querySelector('#pin_destination').value,
          pin_size:document.querySelector('#pin_size').value,
 
          
       }
-      console.log(users_data);
+    /* console.log(users_data);*/
+     add_pin(users_data);
    }
 
-function modal() {
-   const [pinDetails,setPinDetails]=useState({
-auther:'',
+function modal(props) {
+const [pinDetails,setPinDetails]= useState ({
+author:'',
 board:'',
 title:'',
-descreption:'',
-distination:'',
+description:'',
+destination:'',
 img_blob:'',
 pin_size:'',
 
@@ -129,7 +130,7 @@ const [showModalPin, setshowModalPin]= useState(false);
                         <option value="meduim">meduim</option>
                         <option value="large">large</option>
                       </select>
-                         <div onClick={()=>save_pin(pinDetails)} className="save_pin">save</div>
+                         <div onClick={()=>save_pin( pinDetails, props.add_pin)} className="save_pin">save</div>
 
                    </div>
                 </div>
