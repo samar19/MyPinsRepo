@@ -1,6 +1,6 @@
 import react from 'react';
 import '../styles/final_board_styles.css';
-import Pin from './pin.js';
+//import Pin from './pin.js';
 import Modal from './modal.js';
 
 
