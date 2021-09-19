@@ -1,7 +1,6 @@
 
-import React,{ usestate }from 'react';
+import React,{ useState }from 'react';
 import '../styles/modal_styles.css'; 
-import { useState } from 'react';
 
 
 function upload_img (event , pinDetails ,setPinDetails ,setshowLabel ,setshowModalPin) {
@@ -60,7 +59,7 @@ function upload_img (event , pinDetails ,setPinDetails ,setshowLabel ,setshowMod
      add_pin(users_data);
    }
 
-function modal(props) {
+function Modal(props) {
 const [pinDetails,setPinDetails]= useState ({
 author:'',
 board:'',
@@ -151,4 +150,4 @@ const [showModalPin, setshowModalPin]= useState(false);
     )
 
 }
-export default modal;
+export default Modal;
